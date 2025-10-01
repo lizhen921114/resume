@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>陳莉蓁 履歷</title>
+  <style>
+    body {
+      font-family: 'Microsoft JhengHei', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffe6f2; /* 粉色背景 */
+      color: #333;
+    }
+    .resume {
+      display: flex;
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      box-shadow: 0 0 15px rgba(0,0,0,0.15);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .left {
+      width: 30%;
+      background: #d63384; /* 深粉色 */
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .photo {
+      width: 120px;
+      height: 150px;
+      background: #fff;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      font-size: 14px;
+    }
+    .left h2 {
+      font-size: 20px;
+      border-bottom: 1px solid #fff;
+      padding-bottom: 5px;
+      margin-top: 20px;
+    }
+    .left p, .left li {
+      font-size: 14px;
+      line-height: 1.6;
+      text-align: left;
+    }
+    .right {
+      width: 70%;
+      padding: 30px;
+    }
+    .right h1 {
+      margin-top: 0;
+      font-size: 28px;
+      border-bottom: 3px solid #d63384;
+      padding-bottom: 10px;
+      color: #d63384;
+    }
+    .section {
+      margin-bottom: 25px;
+    }
+    .section h2 {
+      font-size: 20px;
+      color: #d63384;
+      border-left: 4px solid #d63384;
+      padding-left: 10px;
+      margin-bottom: 10px;
+    }
+    .section ul {
+      padding-left: 20px;
+    }
+    .section li {
+      margin-bottom: 8px;
+      list-style: none;
+      position: relative;
+      padding-left: 22px;
+    }
+    .section li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      color: #d63384;
+    }
+    .btns {
+      margin-top: 20px;
+      text-align: center;
+    }
+    button {
+      margin: 5px;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 4px;
+      background: #d63384;
+      color: #fff;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #a12260;
+    }
+    .objective {
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="resume">
+    <div class="left">
+      <div class="photo">照片</div>
+
+      <h2>個人資料</h2>
+      <p><strong>姓名：</strong>陳莉蓁</p>
+      <p><strong>學號：</strong>111012018</p>
+      <p><strong>學校：</strong>亞洲大學</p>
+      <p><strong>系所：</strong>保健系藥妝組 4A</p>
+      <p><strong>Email：</strong>lizhenchen987@gmail.com</p>
+      <p><strong>居住地：</strong>台中市</p>
+      <p><strong>電話：</strong>09xx-xxx-xxx</p>
+
+      <h2>興趣</h2>
+      <ul>
+        <li>學習美妝或保養類相關知識</li>
+        <li>手作、動手做各種東西</li>
+      </ul>
+
+      <h2>證照</h2>
+      <ul>
+        <li>美容丙級證照（已取得）</li>
+        <li>美容乙級證照（預計考取）</li>
+        <li>INDBA國際調香師證照</li>
+      </ul>
+    </div>
+
+    <div class="right">
+      <h1>履歷表</h1>
+
+      <div class="section objective">
+        <h2>自我介紹 / 求職目標</h2>
+        <p>熱愛美容保養，具備美容丙級證照及助教經驗，期望進入醫美診所實習並累積專業實務經驗。</p>
+      </div>
+
+      <div class="section">
+        <h2>學歷</h2>
+        <p>亞洲大學 保健系藥妝組 (大四)</p>
+      </div>
+
+      <div class="section">
+        <h2>實習 / 經驗</h2>
+        <ul>
+          <li>尚未實習（預計大四下至醫美診所實習）</li>
+          <li>現任「美容學原理」課程助教</li>
+          <li>學過水飛梭、超聲波儀器操作、皮檢儀操作</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>技能</h2>
+        <ul>
+          <li>美容學原理助教經驗</li>
+          <li>水飛梭操作</li>
+          <li>超聲波儀器操作</li>
+          <li>皮膚檢測儀使用</li>
+          <li>化妝與保養知識應用</li>
+          <li>團隊協作與溝通能力</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="btns">
+    <button onclick="window.print()">列印 / 存 PDF</button>
+    <button onclick="downloadHTML()">下載 HTML</button>
+  </div>
+
+  <script>
+    function downloadHTML() {
+      const content = document.documentElement.outerHTML;
+      const blob = new Blob([content], {type: 'text/html'});
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = '履歷_111012018_陳莉蓁.html';
+      link.click();
+    }
+  </script>
+</body>
+</html>
